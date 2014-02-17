@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Facebook button colorizer</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.0/united/bootstrap.min.css">
+	<link rel="stylesheet" href="slider.css">
+	<link rel="stylesheet" href="fb-colorize.css">
+</head>
+<body>
+	<header class="container">
+		<h1><span class="logo"><span>fbc</span></span> Facebook button colorizer</h1>
+	</header>
+	
+	<div class="container">	
+		<div class="row">
+			<div class="col-md-7">
+				<form id="colorize">
+					<h2>Colorize your Facebook button</h2>
+					<p>Use the slider, pick one of the defaults,
+					   or mess with the filter code yourself.</p>
+					<br>
+					<div class="field fbc-slider">
+						<label for="input-fbc-slider">Button slider</label><br/>
+						<input type="text" name="input-fbc-slider" id="input-fbc-slider"
+							class="span2" style="width: 440px;"
+							data-slider-min="0" data-slider-max="359" data-slider-step="1" 
+							data-slider-value="200" data-slider-orientation="horizontal" 
+							data-slider-selection="after" data-slider-tooltip="hide">
+					</div>
+					<br>
+					<div class="field fbc-defaults">
+						<label for="input-fbc-defaults">Colorize defaults</label><br/>
+						<div class="container">
+							<div class="row">
+								<div class="col col-sm-1">
+									<div class="preset p0 btn"><div
+										><b>fbc</b> <i>0</i
+									></div></div>
+								</div>
+								<div class="col col-sm-1">
+									<div class="preset p30 btn"><div>
+										<b>fbc</b> <i>30</i>
+									</div></div>
+								</div>
+								<div class="col col-sm-1">
+									<div class="preset p60 btn"><div>
+										<b>fbc</b> <i>60</i>
+									</div></div>
+								</div>
+								<div class="col col-sm-1">
+									<div class="preset p90 btn"><div>
+										<b>fbc</b> <i>90</i>
+									</div></div>
+								</div>
+								<div class="col col-sm-1">
+									<div class="preset p120 btn"><div>
+										<b>fbc</b> <i>120</i>
+									</div></div>
+								</div>
+								<div class="col col-sm-1">
+									<div class="preset p150 btn"><div>
+										<b>fbc</b> <i>150</i>
+									</div></div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col col-sm-1">
+									<div class="preset p180 btn"><div>
+										<b>fbc</b> <i>180</i>
+									</div></div>
+								</div>
+								<div class="col col-sm-1">
+									<div class="preset p210 btn"><div>
+										<b>fbc</b> <i>210</i>
+									</div></div>
+								</div>
+								<div class="col col-sm-1">
+									<div class="preset p240 btn"><div>
+										<b>fbc</b> <i>240</i>
+									</div></div>
+								</div>
+								<div class="col col-sm-1">
+									<div class="preset p270 btn"><div>
+										<b>fbc</b> <i>270</i>
+									</div></div>
+								</div>
+								<div class="col col-sm-1">
+									<div class="preset p300 btn"><div>
+										<b>fbc</b> <i>300</i>
+									</div></div>
+								</div>
+								<div class="col col-sm-1">
+									<div class="preset p330 btn"><div>
+										<b>fbc</b> <i>330</i>
+									</div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="field fbc-filter">
+						<label for="code-fbc-filter">Colorize filter</label><br/>
+						<textarea name="code-fbc-filter" id="code-fbc-filter" cols="64" rows="6" style="width:100%"
+>&lt;svg height="0" width="0"&gt;
+	&lt;filter id="fb-filter"&gt;
+		&lt;feColorMatrix type="hueRotate" values="200"/&gt;
+	&lt;/filter&gt;
+&lt;/svg&gt;</textarea>
+					</div>
+					<div id="container-fbc-filter">
+						<svg height="0" width="0">
+							<filter id="fb-filter">
+								<feColorMatrix type="hueRotate" values="200"/>
+							</filter>
+						</svg>
+					</div>
+					<style>
+						.fb-like, .fb-send, .fb-share-button {
+							-webkit-filter: url(#fb-filter); 
+							filter: url(#fb-filter);
+						}
+					</style>
+					<button type="submit" class="btn btn-success">
+						<span class="glyphicon glyphicon-cog"> </span>
+						<b> Apply colorize filter </b>
+					</button>
+				</form>
+				<hr>
+				<div class="col ">
+					<h3>Copy-paste this code</h3>
+					<pre id="paste-fbc-filter" class="well"
+>&lt;svg height="0" width="0"&gt;
+	&lt;filter id="fb-filter"&gt;
+		&lt;feColorMatrix type="hueRotate" values="200"/&gt;
+	&lt;/filter&gt;
+&lt;/svg&gt;
+&lt;style&gt;
+	.fb-like, .fb-send, .fb-share-button {
+		-webkit-filter: url(#fb-filter); 
+		filter: url(#fb-filter);
+	}
+&lt;/style&gt;</pre>
+
+				</div><!-- /col well -->
+			</div><!-- /col -->
+			<div class="col-md-5">
+				<h2>Your button will look like this</h2>
+				<hr>
+				<div class="preview">
+					<div id="container-fb-sdk">
+						<div id="fb-root"></div>
+						<script>(function(d, s, id) {
+						  var js, fjs = d.getElementsByTagName(s)[0];
+						  if (d.getElementById(id)) return;
+						  js = d.createElement(s); js.id = id;
+						  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+						  fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));</script>
+					</div>
+					<div id="container-fb-button">
+						<div class="fb-like" data-href="http://facebook.com" data-layout="button_count"
+						     data-action="like" data-show-faces="false" data-share="true">
+							Waiting for button to load...
+						</div>
+					</div>
+				</div>
+				<hr>
+				<br>
+				<div class="col well">
+					<form id="preview">
+						<h3>Change the preview button</h3>
+						<p><a href="https://developers.facebook.com/docs/plugins">Create</a> 
+							the button on Facebook and paste the button code here.</p>
+						<div class="field fb-sdk">
+							<label for="code-fb-sdk">Facebook SDK code</label><br>
+							<textarea name="code-fb-sdk" id="code-fb-sdk" cols="48" rows="8" style="width:100%"
+>&lt;div id="fb-root"&gt;&lt;/div&gt;
+&lt;script&gt;(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));&lt;/script&gt;</textarea>
+						</div>
+						<br>
+						<div class="field fb-button">
+							<label for="code-fb-button">Facebook button code</label><br>
+							<textarea name="code-fb-button" id="code-fb-button" cols="48" rows="3" style="width:100%"
+>&lt;div class="fb-like" data-href="http://facebook.com" 
+     data-layout="button_count" data-action="like" 
+     data-show-faces="false" data-share="true"&gt;&lt;/div&gt;</textarea>
+						</div>
+						<br>
+						<button type="submit" class="btn btn-success" 
+							name="preview" id="preview">
+							<span class="glyphicon glyphicon-ok"></span>
+							<b> Change Preview Button </b>
+						</button>
+					</form>
+				</div>
+				<div class="support">
+					<h2>Browser support</h2>
+					<img src="browser-support.png">
+					<div class="pass"><span class="glyphicon glyphicon-ok"></span></div>
+					<div class="pass"><span class="glyphicon glyphicon-ok"></span></div>
+					<div class="pass"><span class="glyphicon glyphicon-ok"></span></div>
+					<div class="pass"><span class="glyphicon glyphicon-ok"></span></div>
+					<div class="fail"><span class="glyphicon glyphicon-remove"></span></div>
+					</div>
+				</div>
+				<hr>
+			</div><!-- /col -->
+			
+		</div><!-- /row -->
+	</div><!-- /container -->
+	
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="bootstrap-slider.js"></script>
+	<script src="fb-colorize.js"></script>
+</body>
+</html>
