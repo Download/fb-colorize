@@ -7,110 +7,120 @@
 	<link rel="stylesheet" href="fb-colorize.css">
 </head>
 <body>
-	<header class="container">
-		<h1><span class="logo"><span>fbc</span></span> Facebook button colorizer</h1>
+	<header>
+		<div class="container">
+			<h1>
+				<span class="logo"><span>fbc</span></span> 
+				<span class="name">facebook button colorizer</span>
+			</h1>
+			<a href="https://github.com/Download/fb-colorize"
+				><img style="position: absolute; top: 0; right: 0; border: 0;" 
+					src="https://github-camo.global.ssl.fastly.net/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" 
+					alt="Fork me on GitHub" 
+					data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+		</div>
 	</header>
 	
 	<div class="container">	
 		<div class="row">
-			<div class="col-md-7">
+			<div class="col-xs-7">
 				<form id="colorize">
 					<h2>Colorize your Facebook button</h2>
-					<p>Use the slider, pick one of the defaults,
-					   or mess with the filter code yourself.</p>
+					<p>Use the slider, pick one of the presets,
+					   or play with the filter code yourself.</p>
 					<br>
 					<div class="field fbc-slider">
-						<label for="input-fbc-slider">Button slider</label><br/>
+						<label for="input-fbc-slider">Color slider</label><br/>
 						<input type="text" name="input-fbc-slider" id="input-fbc-slider"
-							class="span2" style="width: 440px;"
+							class="span2" style="width: 350px;"
 							data-slider-min="0" data-slider-max="359" data-slider-step="1" 
-							data-slider-value="200" data-slider-orientation="horizontal" 
+							data-slider-value="0" data-slider-orientation="horizontal" 
 							data-slider-selection="after" data-slider-tooltip="hide">
 					</div>
 					<br>
-					<div class="field fbc-defaults">
-						<label for="input-fbc-defaults">Colorize defaults</label><br/>
-						<div class="container">
+					<div class="field fbc-presets">
+						<label>Color presets</label><br/>
+						<!--div class="container" -->
 							<div class="row">
-								<div class="col col-sm-1">
+								<div class="prs col-xs-2">
 									<div class="preset p0 btn"><div
 										><b>fbc</b> <i>0</i
 									></div></div>
 								</div>
-								<div class="col col-sm-1">
+								<div class="prs col-xs-2">
 									<div class="preset p30 btn"><div>
 										<b>fbc</b> <i>30</i>
 									</div></div>
 								</div>
-								<div class="col col-sm-1">
+								<div class="prs col-xs-2">
 									<div class="preset p60 btn"><div>
 										<b>fbc</b> <i>60</i>
 									</div></div>
 								</div>
-								<div class="col col-sm-1">
+								<div class="prs col-xs-2">
 									<div class="preset p90 btn"><div>
 										<b>fbc</b> <i>90</i>
 									</div></div>
 								</div>
-								<div class="col col-sm-1">
+								<div class="prs col-xs-2">
 									<div class="preset p120 btn"><div>
 										<b>fbc</b> <i>120</i>
 									</div></div>
 								</div>
-								<div class="col col-sm-1">
+								<div class="prs col-xs-2">
 									<div class="preset p150 btn"><div>
 										<b>fbc</b> <i>150</i>
 									</div></div>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col col-sm-1">
+								<div class="prs col-xs-2">
 									<div class="preset p180 btn"><div>
 										<b>fbc</b> <i>180</i>
 									</div></div>
 								</div>
-								<div class="col col-sm-1">
+								<div class="prs col-xs-2">
 									<div class="preset p210 btn"><div>
 										<b>fbc</b> <i>210</i>
 									</div></div>
 								</div>
-								<div class="col col-sm-1">
+								<div class="prs col-xs-2">
 									<div class="preset p240 btn"><div>
 										<b>fbc</b> <i>240</i>
 									</div></div>
 								</div>
-								<div class="col col-sm-1">
+								<div class="prs col-xs-2">
 									<div class="preset p270 btn"><div>
 										<b>fbc</b> <i>270</i>
 									</div></div>
 								</div>
-								<div class="col col-sm-1">
+								<div class="prs col-xs-2">
 									<div class="preset p300 btn"><div>
 										<b>fbc</b> <i>300</i>
 									</div></div>
 								</div>
-								<div class="col col-sm-1">
+								<div class="prs col-xs-2">
 									<div class="preset p330 btn"><div>
 										<b>fbc</b> <i>330</i>
 									</div></div>
 								</div>
 							</div>
-						</div>
+						<!-- /div -->
 					</div>
 					<br>
 					<div class="field fbc-filter">
-						<label for="code-fbc-filter">Colorize filter</label><br/>
+						<label for="code-fbc-filter">Color filter</label><br/>
 						<textarea name="code-fbc-filter" id="code-fbc-filter" cols="64" rows="6" style="width:100%"
 >&lt;svg height="0" width="0"&gt;
-	&lt;filter id="fb-filter"&gt;
-		&lt;feColorMatrix type="hueRotate" values="200"/&gt;
-	&lt;/filter&gt;
+  &lt;filter id="fb-filter"&gt;
+    &lt;feColorMatrix type="hueRotate" values="0"/&gt;
+  &lt;/filter&gt;
 &lt;/svg&gt;</textarea>
 					</div>
 					<div id="container-fbc-filter">
 						<svg height="0" width="0">
 							<filter id="fb-filter">
-								<feColorMatrix type="hueRotate" values="200"/>
+								<feColorMatrix type="hueRotate" values="0"/>
 							</filter>
 						</svg>
 					</div>
@@ -122,30 +132,31 @@
 					</style>
 					<button type="submit" class="btn btn-success">
 						<span class="glyphicon glyphicon-cog"> </span>
-						<b> Apply colorize filter </b>
+						<b> Apply color filter </b>
 					</button>
 				</form>
 				<hr>
 				<div class="col ">
 					<h3>Copy-paste this code</h3>
+					<p>Paste this code near the facebook button in your site's HTML.</p>
 					<pre id="paste-fbc-filter" class="well"
 >&lt;svg height="0" width="0"&gt;
-	&lt;filter id="fb-filter"&gt;
-		&lt;feColorMatrix type="hueRotate" values="200"/&gt;
-	&lt;/filter&gt;
+  &lt;filter id="fb-filter"&gt;
+    &lt;feColorMatrix type="hueRotate" values="0"/&gt;
+  &lt;/filter&gt;
 &lt;/svg&gt;
 &lt;style&gt;
-	.fb-like, .fb-send, .fb-share-button {
-		-webkit-filter: url(#fb-filter); 
-		filter: url(#fb-filter);
-	}
+  .fb-like, .fb-send, .fb-share-button {
+    -webkit-filter: url(#fb-filter); 
+    filter: url(#fb-filter);
+  }
 &lt;/style&gt;</pre>
 
 				</div><!-- /col well -->
 			</div><!-- /col -->
-			<div class="col-md-5">
+			<div class="col-xs-5">
 				<h2>Your button will look like this</h2>
-				<hr>
+				<p>Live preview. Press it to like my <a href="http://stijndewitt.wordpress.com/2014/02/20/change-facebook-like-share-button-color">blog post</a> about this tool.</p>
 				<div class="preview">
 					<div id="container-fb-sdk">
 						<div id="fb-root"></div>
@@ -158,15 +169,14 @@
 						}(document, 'script', 'facebook-jssdk'));</script>
 					</div>
 					<div id="container-fb-button">
-						<div class="fb-like" data-href="http://facebook.com" data-layout="button_count"
-						     data-action="like" data-show-faces="false" data-share="true">
+						<div class="fb-like" 
+						     data-href="http://stijndewitt.wordpress.com/2014/02/20/change-facebook-like-share-button-color" 
+							 data-layout="button_count" data-action="like" data-show-faces="false" data-share="true">
 							Waiting for button to load...
 						</div>
 					</div>
 				</div>
-				<hr>
-				<br>
-				<div class="col well">
+				<div class="change-preview col well">
 					<form id="preview">
 						<h3>Change the preview button</h3>
 						<p><a href="https://developers.facebook.com/docs/plugins">Create</a> 
@@ -195,25 +205,117 @@
 						<button type="submit" class="btn btn-success" 
 							name="preview" id="preview">
 							<span class="glyphicon glyphicon-ok"></span>
-							<b> Change Preview Button </b>
+							<b> Change Preview</b>
 						</button>
 					</form>
 				</div>
 				<div class="support">
 					<h2>Browser support</h2>
 					<img src="browser-support.png">
-					<div class="pass"><span class="glyphicon glyphicon-ok"></span></div>
-					<div class="pass"><span class="glyphicon glyphicon-ok"></span></div>
-					<div class="pass"><span class="glyphicon glyphicon-ok"></span></div>
-					<div class="pass"><span class="glyphicon glyphicon-ok"></span></div>
-					<div class="fail"><span class="glyphicon glyphicon-remove"></span></div>
-					</div>
-				</div>
+					<div class="pass"><span class="glyphicon glyphicon-ok"></span></div
+					><div class="pass"><span class="glyphicon glyphicon-ok"></span></div
+					><div class="pass"><span class="glyphicon glyphicon-ok"></span></div
+					><div class="pass"><span class="glyphicon glyphicon-ok"></span></div
+					><div class="fail"><span class="glyphicon glyphicon-remove"></span></div
+				></div>
 				<hr>
 			</div><!-- /col -->
 			
 		</div><!-- /row -->
 	</div><!-- /container -->
+
+	<div class="bar opensource">
+		<div class="container">
+			<div class="row">
+				<div class="col col-xs-5 img">
+					<img src="opensource-logo.png" />
+				</div><!-- /col -->
+				<div class="col col-xs-7 text">
+					<h2>Open Source</h2>
+					<p><b>facebook button colorizer</b>, or fb-colorize for short,
+					is <a href="http://opensource.org">Open Source</a> software, 
+					distributed under the Creative Commons Attribution 3.0 <a 
+					href="https://creativecommons.org/licenses/by/3.0/">license</a>. 
+					This means you are free to adapt this program to fit your needs 
+					and that you are free to share those changes with others as long
+					as you give appropriate credit, provide a link to the license, and 
+					indicate what changes were made. You may not impose any additional
+					restrictions on the people you share your changes with.</p>
+					
+					<p>Because this is free software there is <b>NO WARRANTY</b> whatsoever.
+					Use at your own risk.</p>
+					
+					<p>You can <a href="https://github.com/Download/fb-colorize">download 
+					the fb-colorize source code</a> from GitHub</a>. 
+					You can also report any issues you may find there or make suggestions and feature 
+					requests. For more general feedback, please refer to my <a 
+					href="http://stijndewitt.wordpress.com/2014/02/20/change-facebook-like-share-button-color"
+					>blog post</a> on this topic.</p>
+				</div><!-- /col -->
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div
+	
+	><div class="bar credits">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-7 text">
+					<h2>I'd like to thank</h2>
+					<p><a href="http://stackoverflow.com/">Stackoverflow</a>, for being a big help every day.</p>
+					<p><a href="http://www.oleschmitt.com.br/">Ole Schmitt</a> for 
+					<a href="http://stackoverflow.com/questions/4095946/how-to-change-color-of-facebook-like-button"
+					>inspiring me</a> to build this tool.</p>
+					<p><a href="http://getbootstrap.com/">Twitter Bootstrap</a> for their lay-out tool.</p>
+					<p><a href="http://jquery.com/">jQuery</a>, for bringing it to life.</p>
+					<p><a href="http://github.com">GitHub</a>, for hosting <a href="https://github.com/Download/fb-colorize">the code</a>.</p>
+					<p><a href="http://wordpress.com">WordPress</a>, for hosting <a href="https://stijndewitt.wordpress.com">my blog</a>.</p>
+					<p><a href="http://facebook.com">Facebook</a>, for being an awesome social network.</p>
+				</div><!-- /col -->
+				<div class="col-xs-5 img">
+						<div class="row">
+							<div class="col-xs-4"><img src="stackoverflow-logo.png" /><br></div>
+							<div class="col-xs-4"><img src="oleschmitt-logo.png" /></div>
+							<div class="col-xs-4"><img src="bootstrap-logo.svg" /></div>
+						</div>
+						<div class="row">
+							<div class="col-xs-4"><img src="jquery-logo.png" /></div>
+							<div class="col-xs-4"><img src="github-logo.png" /></div>
+							<div class="col-xs-4"><img src="wordpress-logo.png" /></div>
+						</div>
+				</div><!-- /col -->
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div
+	
+	><footer>
+		<div class="container">
+			<div class="row .clearfix">
+				<div class="col col-sm-7">
+					<br>
+					<div class="disclaimer">
+						<small>
+							DISCLAIMER: This tool, nor myself, are in any way, shape or form 
+							associated with or endorsed by Facebook corporation. Changing the
+							appearance of your Facebook buttons may be against Facebook's
+							brand guidelines. There is NO WARRANTY whatsoever. Use at your own risk.
+						</small>
+					</div>
+				</div>
+				<div class="col col-sm-5">
+					<br>
+					<div class="copyright">
+						<small>
+							Copyright 2014 by <a href="http://stijndewitt.com" rel="author"
+								>Stijn de Witt</a>, some rights reserved.<br>
+							Licensed under the Creative Commons Attribution 3.0 <a 
+							href="https://creativecommons.org/licenses/by/3.0/">license</a>.<br>
+							You are free to share and adapt this work as long as you give due credit.
+						</small>
+					</div>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</footer>
 	
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>

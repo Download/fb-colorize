@@ -1,46 +1,178 @@
-﻿@media (min-width: 0px) {
-	h2 {font-size: 24px;}
+﻿body {min-width: 460px;}
+
+@media (min-width: 0px) {
+	header .logo {font-size: 20pt; top: -3px;}
+	header .logo span {bottom: -5px;}
+	header .name {font-size: 20pt;}
+	header img {width: 100px;}
+	h2 {font-size: 12pt;}
+	h3 {font-size: 10.5pt; letter-spacing: -0.5px;}
+	p {font-size: 12px;}
+	label {font-size: 11px; letter-spacing: -0.0px}
+	textarea {font-size: 10px;}
+	small, .small {font-size: 8px; letter-spacing: -0.5px;}
+	.well {padding: 10px;}
+	.well p {font-size: 11px;}
+	.btn {font-size: 10px;}
+	.prs {padding-left: 8px; padding-right: 8px;}
+	.preset {font-size: 7pt; padding: 3px 0px; margin: 2px 0;}
+	.preset i {margin-left: -9px;}
 }
 
-@media (min-width: 768px) {
-	h2 {font-size: 27px;}
-	.preset {font-size: 7pt; padding: 3px 0px; margin: 2px 0;}
+@media (min-width: 512px) {
+	header .logo {font-size: 22pt; top: -4px;}
+	header .logo span {bottom: -5px;}
+	header .name {font-size: 23pt;}
+	header img {width: 115px;}
+	h2 {font-size: 12.5pt;}
+	p {font-size: 13px;}
+	label {font-size: 12px; letter-spacing:0px}
+	.well {padding: 12px;}
+	.btn {font-size: 11px;}
+	.preset i {margin-left: -12px;}
+}
+
+@media (min-width: 600px) {
+	header .logo {font-size: 28pt; top: -6px;}
+	header .logo span {bottom: -8px;}
+	header .name {font-size: 28pt;}
+	header img {width: 125px;}
+	h3 {letter-spacing: 0px;}
+	.preset i {margin-left: -8px;}
+}
+
+@media (min-width: 620px) {
+	h3 {font-size: 11pt;}
+}
+
+@media (min-width: 640px) {
+	header .logo {font-size: 29pt; top: -7px;}
+	header .logo span {bottom: -9px;}
+	header .name {font-size: 29pt;}
+	header img {width: 130px;}
+	h2 {font-size: 12.5pt;}
+	h3 {font-size: 12pt;}
+	p {font-size: 13px;}
+	label {font-size: 13px;}
+	textarea {font-size: 12px;}
+	.well textarea {font-size: 10px; letter-spacing: -1px;}
+	.well {padding: 15px;}
+	.well p {font-size: 12px;}
+	.preset {font-size: 8pt; padding: 3px 0px; margin: 2px 0;}
+	.preset i {margin-left: -6px;}
+}
+
+@media (min-width: 700px) {
+	header .logo {font-size: 32pt; top: -7px;}
+	header .logo span {bottom: -9px;}
+	header .name {font-size: 32pt;}
+	header img {width: 135px;}
+	h2 {font-size: 13pt;}
+	h3 {font-size: 12.5pt;}
+	p {font-size: 14px;}
+	.btn {font-size: 12px;}
 	.preset i {margin-left: -3px;}
 }
 
-@media (min-width: 992px) {
-	h2 {font-size: 27px;}
+@media (min-width: 748px) {
+	header .logo {font-size: 33pt;}
+	header .name {font-size: 33pt;}
+	header img {width: 140px;}
+	h2 {font-size: 15pt;}
+	.well {padding: 17px;}
+	.well p {font-size: 13px;}
+	.preset i {margin-left: -3px;}
+}
+
+@media (min-width: 768px) {
+	header .logo {font-size: 34pt; top: -8px;}
+	header .logo span {bottom: -11px;}
+	header .name {font-size: 34pt;}
+	header img {width: 145px;}
+	h2 {font-size: 16pt;}
+	p {font-size: 15px;}
+	label {font-size: 14px;}
+	textarea {font-size: 12px;}
+	small, .small {font-size: 10px;}
+	.well textarea {font-size: 10px;}
+	.well {padding: 19px;}
+	.well p {font-size: 14px;}
+	.btn {font-size: 13px;}
 	.preset {font-size: 10pt; padding: 3px 0px; margin: 2px 0;}
-	.preset i {margin-left: -1px;}
+	.preset i {margin-left: -2px;}
+}
+
+@media (min-width: 992px) {
+	header .logo {font-size: 36pt;}
+	header .name {font-size: 36pt;}
+	header img {width: 140px;}
+	h2 {font-size: 20pt;}
+	h3 {font-size: 18pt;}
+	small, .small {font-size: 11px; letter-spacing: 0px;}
+	.btn {font-size: 14px;}
+	.preset {font-size: 10pt; padding: 3px 0px; margin: 2px 0;}
+	.preset i {margin-left: 4px;}
 }
 
 @media (min-width: 1200px) {
-	h2 {font-size: 30px;}
+	header .logo {font-size: 38pt;}
+	header .name {font-size: 38pt;}
+	header img {width: 150px;}
+	h2 {font-size: 22pt;}
+	h3 {font-size: 20pt;}
+	p {font-size: 16px;}
+	small, .small {font-size: 13px;}
+	.well textarea {font-size: 12px;}
 	.preset {font-size: 11pt; padding: 3px; margin: 4px 2px;}
-	.preset i {margin-left: 4px;}
+	.preset i {margin-left: 6px;}
 }
 
 .well h2, .well h3 {margin-top: 0;}
 
+.btn-success {
+    background-color: #3B7C00;
+    border-color: #3B7C00;
+}
+
+.btn-success:hover {
+    background-color: #408800;
+    border-color: #408800;
+}
+
+textarea {font-family: "Consolas", "Courier New", "Courier", "fixed-width"; letter-spacing: -0.5px;}
+
 header {
 	text-align: center;
-	background-color: #4963B4;
+	background-color: #408800;
 	color: white;
+	padding: 16px;
+	margin-bottom: 20px;
+}
+
+header .container {
+	padding: 10px 0;
 }
 
 header .logo {
 	padding: 0px 2px 0px 4px;
 	background-color: white;
 	position: relative;
-	top: -8px;
 	font-weight: bold;
-	font-size: 38pt;
 }
 
 header .logo span {
-	color: #4963B4;
+	color: #408800;
 	position: relative;
-	bottom: -10px;
+	right: -1px;
+}
+
+header .name {
+	margin-left: 16px;
+}
+
+.fbc-presets .row {
+	margin-left: -5px;
+	margin-right: -5px;
 }
 
 .preset {
@@ -52,11 +184,15 @@ header .logo span {
 
 .preset div {
 	line-height: 0.9;
-	width: 42%;
+	width: 31%;
 	margin: 0 0 0 1px;
 	padding: 0;
 	background-color: white;
 	text-align: right;
+}
+
+.preset:hover {
+	opacity: 0.9;
 }
 
 .preset b {
@@ -157,21 +293,72 @@ header .logo span {
 	color: #0076A5;
 }
 
+#colorize textarea {
+	box-shadow: 0px 0px 80px rgba(80, 80, 80, 0.1);
+}
+
+.change-preview {
+	margin-top: 40px;
+}
+
 .support img {
-	width: 90%;
+	width: 100%;
 }
 
 .support .pass, 
 .support .fail {
 	display: inline-block;
-	margin-left: 6.5%;
+	width: 20%;
+	text-align: center;
 }
  
 .support .pass {
-	width: 11%;
 	color: #008600;
 }
 
 .support .fail {
 	color: red;
+}
+
+.bar {
+	padding: 40px 0;
+}
+
+.bar img {
+	width: 100%;
+	max-width: 300px;
+}
+
+
+.bar.opensource {
+	margin-top: 60px;
+	background: #efefef;
+}
+
+.bar.credits {
+	background: #dbeeca;
+}
+
+.bar.credits img {
+	width: 100%;
+	margin-top: 20px;
+}
+
+footer {
+	background-color: #408800;
+	padding: 25px 10px 35px 10px;
+	color: #ccc;
+}
+
+footer a {
+	color: #e6a98d;
+}
+
+footer a:hover {
+	color: #f3e1d9;
+	text-decoration: underline;
+}
+
+footer .disclaimer {
+	padding-right: 10%;
 }
