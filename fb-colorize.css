@@ -180,6 +180,7 @@ header .name {
 	text-align: center;
 	color: white;
 	margin: 4px 0;
+	background-image: linear-gradient(to left top, rgba(0, 0, 0, 0.15) 0%, rgba(230, 230, 230, 0.1) 100%);
 }
 
 .preset div {
