@@ -1,5 +1,5 @@
-fb-colorize
-===========
+Facebook Button Colorizer 
+=========================
 
 Tool demonstrating the use of SVG filters in modern web browsers.
 
